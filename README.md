@@ -36,7 +36,7 @@ This project is a Selenium-based automation framework developed to test the Craf
 │
 ├── pom.xml
 ├── testng.xml
-└── README.md```
+└── README.md
 
 ### Prerequisites:
 Ensure the following are installed on your system:
