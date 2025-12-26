@@ -23,7 +23,6 @@ public class TestBase {
 	  return driver;
 	}
 	
-	
 	public void readProp() throws IOException  //read config.properties file
 	{
 		FileReader fle=new FileReader("C:\\Users\\Samitha Fathima\\OneDrive\\Pictures\\Desktop\\SDET\\Craftyfy\\CraftyfyProject\\src\\test\\resources\\config.properties");
@@ -36,9 +35,9 @@ public class TestBase {
 	{
 		readProp();
 		driver=new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get(prop.getProperty("url"));
+		driver.manage().window().maximize();	//maximizing browser window
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	//implicit wait 
+		driver.get(prop.getProperty("url"));    //reading url from properties file
 	}
 	@AfterClass
 	public void tearDown()

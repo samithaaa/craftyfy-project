@@ -19,7 +19,7 @@ public class ContactPage {
 		this.driver=driver;
 		wait=new WebDriverWait(this.driver,Duration.ofSeconds(10));
 	}
-	public WebElement exploreJobs()
+	public WebElement exploreJobs()	//click explore jobs button on contact page
 	{
 		WebElement explore=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Explore Jobs']")));
 		explore.click();

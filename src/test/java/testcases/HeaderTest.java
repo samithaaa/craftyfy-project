@@ -26,23 +26,23 @@ public class HeaderTest extends TestBase{
 		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 	}
 	
-	@Test
-	public void tc601()
+	@Test(priority=1)
+	public void checkSearch()
 	{
 		hdp.searchIcon();
 		Assert.assertTrue(pdp.search().isDisplayed());
 	}
 
-	@Test
-	public void tc602() throws InterruptedException
+	@Test(priority=2)
+	public void checkAbout() throws InterruptedException
 	{
 		hdp.clickAbout();
 		Thread.sleep(1000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("about"));
 	}
 	
-	@Test
-	public void tc603() throws InterruptedException
+	@Test(priority=3)
+	public void checkContact() throws InterruptedException
 	{
 		hdp.clickContact();
 		Thread.sleep(1000);

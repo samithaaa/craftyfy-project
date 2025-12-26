@@ -28,7 +28,7 @@ public class HeaderPage {
 		user.click();
 	}
 	
-	public void LogOut()
+	public void LogOut()	//clicking logout button from collections page
 	{
 		WebElement clct = driver.findElement(By.xpath("//a[contains(text(),'COLLECTION')]"));
 
@@ -41,24 +41,23 @@ public class HeaderPage {
 
 	}
 	
-	public void clickCart() {
+	public void clickCart() 
+	{
 		WebElement cart= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/cart']")));
 		Actions actions = new Actions(driver);
 	    actions.moveToElement(cart).click().perform();
 	}
 	
-	public void clickCol()
+	public void clickCol()	//clicking collections tab
 	{
+		WebElement clct = driver.findElement(By.xpath("//a[contains(text(),'COLLECTION')]"));
+
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", clct);
 		
-		WebElement coll=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/collection']")));
-		coll.click();
-//		WebElement clct = driver.findElement(By.xpath("//a[contains(text(),'COLLECTION')]"));
-//
-//	    JavascriptExecutor js = (JavascriptExecutor) driver;
-//		js.executeScript("arguments[0].click();", clct);
 	}
 	
-	public void searchIcon()
+	public void searchIcon()	//search products
 	{
 		WebElement search=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[contains(@class,'items-center')]/img)[1]")));
 		search.click();
@@ -76,12 +75,6 @@ public class HeaderPage {
 		cont.click();
 	}
 	
-	public void scroll()
-	{
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-	
-
-	}
 	
 	public void subscribe(String mail) {
 		WebElement sub=wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[type='email']")));
@@ -95,7 +88,7 @@ public class HeaderPage {
 		
 	}
 	
-	public void clickSub()
+	public void clickSub()	
 	{
 		WebElement clk=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='SUBMIT']")));
 		clk.click();

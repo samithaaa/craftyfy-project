@@ -22,13 +22,13 @@ public class ProductPage {
 		wait=new WebDriverWait(this.driver,Duration.ofSeconds(10));
 	}
 
-	public WebElement selectCategory()
+	public WebElement selectCategory()	//checking whether Category is working
 	{
 		WebElement cat=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='checkbox' and @value='Stationery']")));
 		cat.click();
 		return cat;
 	}
-	public WebElement sortBy()
+	public WebElement sortBy() //checking whether sortby option is working
 	{
 		WebElement sort=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//option[@value='low-high']")));
 		sort.click();
@@ -53,7 +53,7 @@ public class ProductPage {
 		color.click();
 	}
 	
-	public WebElement addtoCart()
+	public WebElement addtoCart() //Adding product to cart
 	{
 		WebElement add_prod=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='ADD TO CART']")));
 		add_prod.click();

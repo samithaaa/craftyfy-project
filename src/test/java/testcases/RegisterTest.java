@@ -2,7 +2,9 @@ package testcases;
 
 import java.time.Duration;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -30,22 +32,25 @@ public class RegisterTest extends TestBase {
 		
 	}
 	
-	@Test
-	public void tc701() throws InterruptedException
+	@Test(priority=1)
+	public void validReg() throws InterruptedException
 	{
 		lpg.createAcc();
 		rp.enterName("Siya");
-		rp.enterEmail("siyaaaaan@gmail.com");
+		rp.enterEmail("siyaaaiii@gmail.com");
 		rp.enterPass("Siyaaaa#123");
 		rp.signUp();
 
 		
 	}
-	@Test
-	public void tc702()
+	@Test(priority=2)
+	public void invalidReg()
 	{	hdp.userIcon();
 		lpg.createAcc();
-		rp.signUp();
+		WebElement btn=rp.signUp();
+		Assert.assertFalse(btn.isEnabled(), "sign up should be disabled for empty credentials");
+		
+		
 	}
 
 	

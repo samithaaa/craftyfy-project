@@ -19,18 +19,18 @@ public class OrderPage {
 		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 	}
 	
-	public WebElement isOrderpageLoaded()
+	public WebElement isOrderpageLoaded()	
 	{
 		WebElement myorder= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(.,'MY') and .//span[text()='ORDERS']]")));
 		return myorder;
 	}
 	
-	public WebElement orderPlaced()
+	public WebElement orderPlaced()		//check whether order placed status is displayed
 	{
 		WebElement placed= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[text()='Order Placed']")));
 		return placed;
 	}
-	public void trackOrder()
+	public void trackOrder()	//checking whether track order button is working
 	{
 		WebElement track=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[normalize-space()='Track Order'])[1]")));
 		track.click();

@@ -1,65 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="5" failed="2" skipped="0">
+<testng-results ignored="0" total="4" passed="1" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-24T15:46:36 IST" name="Default suite" finished-at="2025-12-24T15:47:42 IST" duration-ms="65839">
+  <suite started-at="2025-12-26T21:23:29 IST" name="Default suite" finished-at="2025-12-26T21:23:58 IST" duration-ms="28765">
     <groups>
     </groups>
-    <test started-at="2025-12-24T15:46:36 IST" name="Default test" finished-at="2025-12-24T15:47:42 IST" duration-ms="65839">
-      <class name="testcases.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:46:36 IST" name="setUp" finished-at="2025-12-24T15:46:47 IST" duration-ms="10556" status="PASS">
+    <test started-at="2025-12-26T21:23:29 IST" name="Default test" finished-at="2025-12-26T21:23:58 IST" duration-ms="28765">
+      <class name="testcases.WorkflowTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.WorkflowTest@302552ec]" started-at="2025-12-26T21:23:29 IST" name="setUp" finished-at="2025-12-26T21:23:33 IST" duration-ms="3769" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="objinit()[pri:0, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:46:47 IST" name="objinit" finished-at="2025-12-24T15:46:47 IST" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="objectint()[pri:0, instance:testcases.WorkflowTest@302552ec]" started-at="2025-12-26T21:23:33 IST" name="objectint" finished-at="2025-12-26T21:23:35 IST" duration-ms="1894" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- objinit -->
-        <test-method signature="validCred()[pri:1, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:46:47 IST" name="validCred" finished-at="2025-12-24T15:46:55 IST" duration-ms="8048" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validCred -->
-        <test-method is-config="true" signature="objinit()[pri:0, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:46:55 IST" name="objinit" finished-at="2025-12-24T15:46:55 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- objinit -->
-        <test-method signature="homeLogout()[pri:2, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:46:55 IST" name="homeLogout" finished-at="2025-12-24T15:46:56 IST" duration-ms="1627" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        </test-method> <!-- objectint -->
+        <test-method signature="addingToCart()[pri:1, instance:testcases.WorkflowTest@302552ec]" started-at="2025-12-26T21:23:35 IST" name="addingToCart" finished-at="2025-12-26T21:23:36 IST" duration-ms="1395" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[element click intercepted: Element <p class="cursor-pointer hover:text-black">...</p> is not clickable at point (1106, 205). Other element would receive the click: <img class="w-full h-full object-cover" src="/assets/heroimage1-lnny11sK.jpg" alt="Carousel Image 1">
-  (Session info: chrome=143.0.7499.169)
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3818bf895964f9b0affdcfc59aeea6e9, clickElement {id=f.F13A2715BEE58D8F1DA7773683AD9599.d.2EF192D7F4D3C69297CD1AFD81E17796.e.47}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.169, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\SAMITH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59052}, goog:processID: 31892, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59052/devtoo..., se:cdpVersion: 143.0.7499.169, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3818bf895964f9b0affdcfc59aeea6e9)] -> xpath: //p[text()='Logout']]
-Session ID: 3818bf895964f9b0affdcfc59aeea6e9]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <p class="cursor-pointer hover:text-black">...</p> is not clickable at point (1106, 205). Other element would receive the click: <img class="w-full h-full object-cover" src="/assets/heroimage1-lnny11sK.jpg" alt="Carousel Image 1">
-  (Session info: chrome=143.0.7499.169)
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3818bf895964f9b0affdcfc59aeea6e9, clickElement {id=f.F13A2715BEE58D8F1DA7773683AD9599.d.2EF192D7F4D3C69297CD1AFD81E17796.e.47}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.169, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\SAMITH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59052}, goog:processID: 31892, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59052/devtoo..., se:cdpVersion: 143.0.7499.169, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3818bf895964f9b0affdcfc59aeea6e9)] -> xpath: //p[text()='Logout']]
-Session ID: 3818bf895964f9b0affdcfc59aeea6e9
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at page.LoginPage.homeLogout(LoginPage.java:83)
-at testcases.LoginTest.homeLogout(LoginTest.java:62)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at testcases.WorkflowTest.addingToCart(WorkflowTest.java:59)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -88,42 +55,32 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- homeLogout -->
-        <test-method signature="collectionLogout()[pri:3, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:46:57 IST" name="collectionLogout" finished-at="2025-12-24T15:46:58 IST" duration-ms="1457" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- collectionLogout -->
-        <test-method is-config="true" signature="objinit()[pri:0, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:46:57 IST" name="objinit" finished-at="2025-12-24T15:46:57 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- objinit -->
-        <test-method is-config="true" signature="objinit()[pri:0, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:46:58 IST" name="objinit" finished-at="2025-12-24T15:46:58 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- objinit -->
-        <test-method signature="forgotPassword()[pri:4, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:46:58 IST" name="forgotPassword" finished-at="2025-12-24T15:47:14 IST" duration-ms="15357" status="FAIL">
+        </test-method> <!-- addingToCart -->
+        <test-method signature="checkOut()[pri:2, instance:testcases.WorkflowTest@302552ec]" started-at="2025-12-26T21:23:36 IST" name="checkOut" finished-at="2025-12-26T21:23:47 IST" duration-ms="10279" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for testcases.LoginTest$$Lambda/0x000001f881372100@31da3d60 (tried for 15 second(s) with 500 milliseconds interval)
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //input[@type='number'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.38.0', revision: '6b412e825c*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.169, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\SAMITH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59052}, goog:processID: 31892, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59052/devtoo..., se:cdpVersion: 143.0.7499.169, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3818bf895964f9b0affdcfc59aeea6e9]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.169, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\SAMITH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62927}, goog:processID: 2368, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62927/devtoo..., se:cdpVersion: 143.0.7499.169, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 79c155634ef8709890bbb839061fb59d]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for testcases.LoginTest$$Lambda/0x000001f881372100@31da3d60 (tried for 15 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@type='number'] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.38.0', revision: '6b412e825c*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.169, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\SAMITH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59052}, goog:processID: 31892, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59052/devtoo..., se:cdpVersion: 143.0.7499.169, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3818bf895964f9b0affdcfc59aeea6e9
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.169, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\SAMITH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62927}, goog:processID: 2368, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62927/devtoo..., se:cdpVersion: 143.0.7499.169, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 79c155634ef8709890bbb839061fb59d
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at testcases.LoginTest.forgotPassword(LoginTest.java:78)
+at page.CartPage.getQty(CartPage.java:26)
+at page.CartPage.increaseQty(CartPage.java:31)
+at testcases.WorkflowTest.checkOut(WorkflowTest.java:67)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -155,36 +112,69 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- forgotPassword -->
-        <test-method is-config="true" signature="objinit()[pri:0, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:47:14 IST" name="objinit" finished-at="2025-12-24T15:47:14 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- checkOut -->
+        <test-method signature="orderPlacing()[pri:3, instance:testcases.WorkflowTest@302552ec]" started-at="2025-12-26T21:23:47 IST" name="orderPlacing" finished-at="2025-12-26T21:23:57 IST" duration-ms="10023" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='firstName'][placeholder='First name'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.169, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\SAMITH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62927}, goog:processID: 2368, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62927/devtoo..., se:cdpVersion: 143.0.7499.169, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 79c155634ef8709890bbb839061fb59d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[name='firstName'][placeholder='First name'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.169, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\SAMITH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62927}, goog:processID: 2368, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62927/devtoo..., se:cdpVersion: 143.0.7499.169, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 79c155634ef8709890bbb839061fb59d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at page.CheckoutPage.setName(CheckoutPage.java:24)
+at testcases.WorkflowTest.orderPlacing(WorkflowTest.java:75)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- objinit -->
-        <test-method signature="invalidCredentials()[pri:5, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:47:14 IST" name="invalidCredentials" finished-at="2025-12-24T15:47:17 IST" duration-ms="2625" status="PASS">
+        </test-method> <!-- orderPlacing -->
+        <test-method signature="checkLogOut()[pri:4, instance:testcases.WorkflowTest@302552ec]" started-at="2025-12-26T21:23:57 IST" name="checkLogOut" finished-at="2025-12-26T21:23:57 IST" duration-ms="372" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidCredentials -->
-        <test-method signature="unregisteredUser()[pri:6, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:47:17 IST" name="unregisteredUser" finished-at="2025-12-24T15:47:30 IST" duration-ms="13703" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- unregisteredUser -->
-        <test-method is-config="true" signature="objinit()[pri:0, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:47:17 IST" name="objinit" finished-at="2025-12-24T15:47:17 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- objinit -->
-        <test-method signature="emptyLogin()[pri:7, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:47:30 IST" name="emptyLogin" finished-at="2025-12-24T15:47:42 IST" duration-ms="11441" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- emptyLogin -->
-        <test-method is-config="true" signature="objinit()[pri:0, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:47:30 IST" name="objinit" finished-at="2025-12-24T15:47:30 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- objinit -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.LoginTest@1e800aaa]" started-at="2025-12-24T15:47:42 IST" name="tearDown" finished-at="2025-12-24T15:47:42 IST" duration-ms="188" status="PASS">
+        </test-method> <!-- checkLogOut -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.WorkflowTest@302552ec]" started-at="2025-12-26T21:23:57 IST" name="tearDown" finished-at="2025-12-26T21:23:58 IST" duration-ms="198" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testcases.LoginTest -->
+      </class> <!-- testcases.WorkflowTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

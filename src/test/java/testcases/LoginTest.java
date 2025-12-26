@@ -81,7 +81,7 @@ public class LoginTest extends TestBase {
 	@Test(priority=5)
 	 public void invalidCredentials() throws IOException
 	{	hdp.userIcon();
-		lpg.setEmail(ExcelUtility.readExcel(1,0));
+		lpg.setEmail(ExcelUtility.readExcel(1,0)); //reading email and password from excel utility
 		lpg.setPassword(ExcelUtility.readExcel(1,1));
 		lpg.setLogin();
 		
@@ -111,7 +111,7 @@ public class LoginTest extends TestBase {
 		hdp.userIcon();
 		lpg.setLogin();
 		Thread.sleep(1000);
-		Assert.assertEquals(driver.getCurrentUrl(),AutomationConstants.loginPageURL);
+		Assert.assertEquals(driver.getCurrentUrl(),AutomationConstants.loginPageURL); //Assert whether empty fields dont allow login
 		
 		
 	}

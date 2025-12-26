@@ -40,15 +40,15 @@ public class CartTest extends TestBase {
         hdp.clickCart();
     }
 	
-	@Test
-	public void tc301()
+	@Test(priority=1)
+	public void cartPageLoaded()
 	{
 		String cartUrl = driver.getCurrentUrl();
 		Assert.assertTrue(cartUrl.contains("cart"));
 	}
 	
-	@Test
-	public void tc302()
+	@Test(priority=2)
+	public void checkIncreaseQty()
 	{
 		int initial=cpg.getValue();
 		cpg.increaseQty();
@@ -56,8 +56,8 @@ public class CartTest extends TestBase {
 		Assert.assertEquals(increase, initial+1,"Quantity did not increase by 1");
 	}
 	
-	@Test
-	public void tc303()
+	@Test(priority=3)
+	public void checkDecreaseQty()
 	{
 		int initial=cpg.getValue();
 		cpg.decreaseQty();
@@ -65,8 +65,8 @@ public class CartTest extends TestBase {
 		Assert.assertEquals(decrease, initial-1,"Quantity did not decrease by 1");
 	}
 	
-	@Test
-	public void tc304()
+	@Test(priority=4)
+	public void checkRemove()
 	{	
 		By product = By.xpath("//p[normalize-space()='Heart Shaped Wall Hanging Photo Frame']");
 		cpg.removeItem();
@@ -75,8 +75,8 @@ public class CartTest extends TestBase {
 		Assert.assertTrue(driver.findElements(product).isEmpty());
 	}
 	
-	@Test
-	public void tc305()
+	@Test(priority=5)
+	public void placingOrder()
 	{
 		hdp.clickCol();
 		pdp.selectProd();

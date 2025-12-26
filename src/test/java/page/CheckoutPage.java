@@ -19,7 +19,7 @@ public class CheckoutPage {
 		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 	}
 
-	public void setName(String fname,String lname)
+	public void setName(String fname,String lname)	//delivery information 
 	{
 		WebElement first=wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[name='firstName'][placeholder='First name']")));
 		first.clear();

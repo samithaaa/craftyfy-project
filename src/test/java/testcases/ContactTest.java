@@ -36,16 +36,16 @@ public class ContactTest extends TestBase{
 		lpg.login("amna@gmail.com","Ammu@2003");
 	}
 	
-	@Test
-	public void tc501()
+	@Test(priority=1)
+	public void checkExploreJobs()
 	{   hdp.clickContact();
 	    cnt.exploreJobs();
 	    Assert.assertTrue(driver.getCurrentUrl().contains("jobs"));
 	
 	}
 
-	@Test
-	public void tc502()
+	@Test(priority=2)
+	public void checkSubscribe()
 	{
 		hdp.subscribe("abc@gmail.com");
 		WebElement mail=hdp.emailSub();

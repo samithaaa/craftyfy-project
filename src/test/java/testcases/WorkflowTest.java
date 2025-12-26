@@ -2,10 +2,12 @@ package testcases;
 
 import java.time.Duration;
 
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.TestBase;
@@ -28,7 +30,7 @@ public class WorkflowTest extends TestBase{
     OrderPage ord;
     
     @BeforeClass
-	public void objectint()
+	public void objectint() throws InterruptedException
 	{
 	lpg=new LoginPage(driver);
 	hdp=new HeaderPage(driver);
@@ -39,11 +41,12 @@ public class WorkflowTest extends TestBase{
 	wait=new WebDriverWait(driver,Duration.ofSeconds(15));
 	hdp.userIcon();
 	lpg.login("amna@gmail.com", "Ammu@2003");
+	Thread.sleep(1000);
 	}
     
    
     @Test(priority=1)
-    public void tc801()
+    public void addingToCart()
     {
     	hdp.clickCol();
     	pdp.selectProd();
@@ -58,7 +61,7 @@ public class WorkflowTest extends TestBase{
     }
     
     @Test(priority=2)
-    public void tc802()
+    public void checkOut()
     {
     	hdp.clickCart();
     	cpg.increaseQty();
@@ -67,7 +70,7 @@ public class WorkflowTest extends TestBase{
 	}
     
     @Test(priority=3)
-    public void tc803()
+    public void orderPlacing()
     {
     	ckt.setName("Amna","A");
 		ckt.enterEmail("amna@gmail.com");
@@ -83,7 +86,7 @@ public class WorkflowTest extends TestBase{
     }
     
     @Test(priority=4)
-    public void tc804()
+    public void checkLogOut()
     {
     	hdp.LogOut();
     }

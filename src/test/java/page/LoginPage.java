@@ -23,21 +23,21 @@ public class LoginPage {
 	}
 	
 	
-	public void setEmail(String email)
+	public void setEmail(String email)  //entering email
 	{
 		WebElement mail= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='email' and @placeholder='Email']")));
 		mail.clear();
 		mail.sendKeys(email);
 	}
 	
-	public void setPassword(String pass)
+	public void setPassword(String pass)	//entering password
 	{
 		WebElement passw=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='password' and @placeholder='Password']")));
 		passw.clear();
 		passw.sendKeys(pass);
 	}
 	
-	public void setLogin()
+	public void setLogin()	//clicking login button
 	{
 		WebElement logbtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Sign In']")));
 		logbtn.click();
@@ -48,7 +48,6 @@ public class LoginPage {
 	    setPassword(password);
 	    setLogin();
 	}
-
 		
 	public WebElement forgetPass()  //Clicking forget password link
 	{
@@ -57,14 +56,14 @@ public class LoginPage {
 		return forget;
 	}
 	
-	public String invalidCred()
+	public String invalidCred()		//checking for invalid credentials message displayed
 	{
 		WebElement invalid_cred= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'Invalid credentials')]")));
 		String msg=invalid_cred.getText();
 		return msg;
 	}
 	
-	public String unregUser()
+	public String unregUser()	//checking for user dont exist message displayed
 	{
 		WebElement not_exist= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='alert' and contains(.,\"User doesn't exists\")]")));
 		String text=not_exist.getText();
@@ -77,13 +76,13 @@ public class LoginPage {
 
 	}
 	
-	public void homeLogout()
+	public void homeLogout()	//clicking logout button from home page
 	{
 		WebElement lgot=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[text()='Logout']")));
 		lgot.click();
 	}
 	
-	public void createAcc()
+	public void createAcc()		//clicking Create Account button
 	{
 		WebElement create=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p[text()='Create account']")));
 		create.click();

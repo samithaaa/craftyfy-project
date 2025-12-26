@@ -36,32 +36,31 @@ public class ProductTest extends TestBase
     }
 	
 
-	@Test
-	public void tc101()
+	@Test(priority=1)
+	public void checkCatSelected()
 	{
-		
 		hdp.clickCol();
 		
 		WebElement category=pdp.selectCategory();
 		Assert.assertTrue(category.isSelected());
 	}
 	
-	@Test
-	public void tc102()
+	@Test(priority=2)
+	public void checkSortSelected()
 	{
 		WebElement sort_opt = pdp.sortBy();
-		Assert.assertTrue(sort_opt.isSelected());
+		Assert.assertTrue(sort_opt.isSelected()); //Assert whether sort by option selected
 	}
 	
-	@Test
-	public void tc103()
+	@Test(priority=3)
+	public void checkTypeSelected()
 	{
 		WebElement filtertype=pdp.selectType();
-		Assert.assertTrue(filtertype.isSelected());
+		Assert.assertTrue(filtertype.isSelected()); //Assert whether type option selected
 	}
 	
-	@Test
-	public void tc104()
+	@Test(priority=4)
+	public void cartBadge()
 	{
 		pdp.selectProd();
 		pdp.selectColor();
@@ -70,12 +69,12 @@ public class ProductTest extends TestBase
 		String added=add.getText();
 		int after=pdp.getCartcount();
 		Assert.assertEquals(after,initial+1,"Cart badge count did not increase by 1 after adding product");
-		Assert.assertTrue(added.contains("Added"));
+		Assert.assertTrue(added.contains("Added"));	//Assert whether added to cart message displayed
 		
 	}
 	
-	@Test
-	public void tc105()
+	@Test(priority=5)
+	public void productSearch()
 	{
 		hdp.searchIcon();
 		pdp.search();

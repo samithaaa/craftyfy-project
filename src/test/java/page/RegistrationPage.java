@@ -37,9 +37,10 @@ public class RegistrationPage {
 		pass.sendKeys(pwd);
 	}
 	
-	public void signUp()
+	public WebElement signUp() //sign up account with new email and password
 	{
-		WebElement sign=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Sign Up']")));
+		WebElement sign=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Sign Up']")));
 		sign.click();
+		return sign;
 	}
 }

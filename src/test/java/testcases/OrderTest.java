@@ -47,7 +47,7 @@ public class OrderTest extends TestBase{
 		Thread.sleep(1000);
 	}
 	@BeforeMethod
-	public void beforeDeliveryInfo()
+	public void beforeDeliveryInfo() //adding product to cart and checkout
 	{
 		hdp.clickCol();
 		pdp.selectProd();
@@ -58,8 +58,8 @@ public class OrderTest extends TestBase{
 		
 	}
 	
-	@Test
-	public void tc401()
+	@Test(priority=1)
+	public void placingOrder()
 	{
 		ckt.setName("Amna","A");
 		ckt.enterEmail("amna@gmail.com");
@@ -76,15 +76,15 @@ public class OrderTest extends TestBase{
 		Assert.assertTrue(placed.isDisplayed());
 	}
 	
-	@Test
-	public void tc402()
+	@Test(priority=2)
+	public void checkTrackorder()
 	{
 		ord.trackOrder();
 		Assert.assertTrue(driver.getCurrentUrl().contains("track"));
 	}
 	
-	@Test
-	public void tc403()
+	@Test(priority=3)
+	public void onlinePayment()
     {
 		ckt.setName("Amna","A");
 		ckt.enterEmail("amna@gmail.com");

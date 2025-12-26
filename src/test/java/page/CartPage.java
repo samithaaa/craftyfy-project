@@ -35,22 +35,22 @@ public class CartPage {
 	public void decreaseQty()
 	{
 		WebElement qty=getQty();
-		qty.sendKeys(Keys.ARROW_DOWN); 
+		qty.sendKeys(Keys.ARROW_DOWN); //decrease quantity through keyboard action
 		
 	}
 	public int getValue()
 	{
-		return Integer.parseInt(getQty().getAttribute("value"));
+		return Integer.parseInt(getQty().getAttribute("value"));	
 	}
 	
-	public void removeItem()
+	public void removeItem()	//clicking remove item from cart icon
 	{
 		WebElement remove= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[text()=' Heart Shaped Wall Hanging Photo Frame ']/ancestor::div//input[@type='number']/following-sibling::img")));
 		remove.click();
 	}
 	
 	
-	public void proceedCheckout()
+	public void proceedCheckout()	//clicking Proceed to Checkout button
 	{
 		WebElement checkout=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='PROCEED TO CHECKOUT']")));
 		checkout.click();
