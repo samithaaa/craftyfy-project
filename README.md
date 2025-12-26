@@ -14,7 +14,7 @@ This project is a Selenium-based automation framework developed to test the Craf
 - Version Control: Git
 
 ### Project Structure
-CraftyfyProject
+'''CraftyfyProject
 │
 ├── src/test/java
 │   ├── base         → Driver & test base setup
@@ -36,7 +36,7 @@ CraftyfyProject
 │
 ├── pom.xml
 ├── testng.xml
-└── README.md
+└── README.md'''
 
 ### Prerequisites:
 Ensure the following are installed on your system:
