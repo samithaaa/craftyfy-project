@@ -1,10 +1,10 @@
-#Craftyfy Testing Project
+# Craftyfy Testing Project
 
-##Project Overview
+## Project Overview
 
 This project is a Selenium-based automation framework developed to test the Craftyfy e-commerce web application. The framework validates core user flows such as login, product browsing, cart operations, and order placement using Java, Selenium WebDriver, TestNG, and Maven, following Page Object Model (POM) design principles
 
-###Tech Stack:
+### Tech Stack:
 - Programming Language: Java
 - Automation Tool: Selenium WebDriver
 - Test Framework: TestNG
@@ -13,7 +13,7 @@ This project is a Selenium-based automation framework developed to test the Craf
 - Reporting: TestNG Reports
 - Version Control: Git
 
-###Project Structure
+### Project Structure
 CraftyfyProject
 │
 ├── src/test/java
@@ -38,7 +38,7 @@ CraftyfyProject
 ├── testng.xml
 └── README.md
 
-###Prerequisites:
+### Prerequisites:
 Ensure the following are installed on your system:
 -Java JDK 8 or above
 -Maven
@@ -46,7 +46,7 @@ Ensure the following are installed on your system:
 -Chrome browser
 -ChromeDriver 
 
-###Setup Instructions
+### Setup Instructions
 1. Clone the Repository
 git clone <github-repo-url>
 cd CraftyfyProject
@@ -62,13 +62,13 @@ mvn clean install
 Run using TestNG XML 
 mvn test
 
-###Screenshot Handling
+### Screenshot Handling
 - Screenshots are captured automatically when a test case fails
 - Implemented using TestNG Listeners (ITestListener)
 - No screenshot code is written inside individual test cases
 - Each screenshot is saved under targets/screenshots/ with Test method name and Timestamp (to avoid overwriting)
 
-###Challenges Addressed:
+### Challenges Addressed:
 
 - Handling dynamic elements using Explicit Waits
 - Capturing screenshots automatically on failures
