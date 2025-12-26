@@ -26,7 +26,6 @@ import utility.ExcelUtility;
 public class LoginTest extends TestBase {
 	
 	
-	
 	LoginPage lpg;
 	HeaderPage hdp;
 	WebDriverWait wait;
@@ -40,8 +39,8 @@ public class LoginTest extends TestBase {
 		wait= new WebDriverWait(driver, Duration.ofSeconds(15));
 	}
 	
-	@Test
-	public void tc001() throws IOException
+	@Test(priority=1)
+	public void validCred() throws IOException
 	{	
 		hdp.userIcon();
 		lpg.setEmail(ExcelUtility.readExcel(0,0));
@@ -57,55 +56,56 @@ public class LoginTest extends TestBase {
 		Assert.assertNotNull(token);  //Assert login by checking if the local storage contains a token
 		
 	}
-	@Test
-	public void tc002()
+	@Test(priority=2)
+	public void homeLogout()
 	{	hdp.userIcon();
 		lpg.homeLogout();
 	}
-	@Test
-	public void tc003() throws InterruptedException
+	@Test(priority=3)
+	public void collectionLogout() throws InterruptedException
 	{
 		hdp.LogOut();
 		Thread.sleep(1000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("/login"));
 	}
 	
-	@Test 
-	public void tc004()
+	@Test (priority=4)
+	public void forgotPassword()
 	{	
 		String loginUrl = driver.getCurrentUrl();
 		WebElement forgot=lpg.forgetPass();
-		Assert.assertTrue(forgot.isDisplayed(), "Forgot password not visible");
-		Assert.assertTrue( wait.until(d -> !d.getCurrentUrl().equals(loginUrl)));	
+		Assert.assertTrue(forgot.isDisplayed(), "Forgot password not visible"); 
+		Assert.assertTrue( wait.until(d -> !d.getCurrentUrl().equals(loginUrl))); //wait until forgot password redirects to another page	
 	}	
 	
-	@Test
-	 public void tc005() throws IOException
+	@Test(priority=5)
+	 public void invalidCredentials() throws IOException
 	{	hdp.userIcon();
 		lpg.setEmail(ExcelUtility.readExcel(1,0));
 		lpg.setPassword(ExcelUtility.readExcel(1,1));
 		lpg.setLogin();
 		
 		String invalid_toast= lpg.invalidCred();
-		Assert.assertEquals(invalid_toast, AutomationConstants.actualInvalid);
+		Assert.assertEquals(invalid_toast, AutomationConstants.actualInvalid); //check whether invalid credentials toast is displayed
 	}
 
-	@Test
-	public void tc006() throws IOException, InterruptedException
-	{   lpg.overLay();
-	Thread.sleep(1000);
+	@Test(priority=6)
+	public void unregisteredUser() throws IOException, InterruptedException
+	{  
+		lpg.overLay();
+	    Thread.sleep(1000);
 		hdp.userIcon();
 		lpg.setEmail(ExcelUtility.readExcel(2,0));
 		lpg.setPassword(ExcelUtility.readExcel(2,1));
 		lpg.setLogin();
 		
 		String unreg_toast = lpg.unregUser();
-		Assert.assertEquals(unreg_toast, AutomationConstants.actualUnreg);
+		Assert.assertEquals(unreg_toast, AutomationConstants.actualUnreg); //Assert whether user dont exist toast is displayed
 		
 	}
 	
-	@Test
-	public void tc007() throws IOException, InterruptedException
+	@Test(priority=7)
+	public void emptyLogin() throws IOException, InterruptedException
 	{
 		lpg.overLay();
 		hdp.userIcon();

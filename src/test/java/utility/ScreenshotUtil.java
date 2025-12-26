@@ -2,7 +2,10 @@
 	
 	import org.openqa.selenium.*;
 	import java.io.File;
-	import org.apache.commons.io.FileUtils;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+import org.apache.commons.io.FileUtils;
 
 	public class ScreenshotUtil {
 
@@ -10,8 +13,10 @@
 	        try {
 	            TakesScreenshot ts = (TakesScreenshot) driver;
 	            File src = ts.getScreenshotAs(OutputType.FILE);
+	            
+	            String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss")); //to generate timestamp of screenshot
 
-	            String path = "C:\\Users\\Samitha Fathima\\OneDrive\\Pictures\\Desktop\\SDET\\Craftyfy\\CraftyfyProject\\target\\screenshots\\" + testName + ".png";
+	            String path = "C:\\Users\\Samitha Fathima\\OneDrive\\Pictures\\Desktop\\SDET\\Craftyfy\\CraftyfyProject\\target\\screenshots\\" + testName +"_" + timestamp  + ".png"; //save in screenshots folder
 	            File dest = new File(path);
 
 	            FileUtils.copyFile(src, dest);

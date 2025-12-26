@@ -50,7 +50,7 @@ public class LoginPage {
 	}
 
 		
-	public WebElement forgetPass()
+	public WebElement forgetPass()  //Clicking forget password link
 	{
 		WebElement forget=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[text()='Forgot your password?']")));
 		forget.click();
@@ -71,7 +71,7 @@ public class LoginPage {
 		return text;
 	}
 	
-	public void overLay()
+	public void overLay() //to wait till toast disappear
 	{
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".loader, .overlay"))); //wait until overlay disappears
 

@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.WorkflowTest">
+      <class name="testcases.LoginTest">
         <methods>
-          <include name="tc801"/>
+          <include name="forgotPassword"/>
+          <include name="homeLogout"/>
+          <include name="objinit"/>
           <include name="tearDown"/>
-          <include name="objectint"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- testcases.WorkflowTest -->
+      </class> <!-- testcases.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

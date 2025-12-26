@@ -35,9 +35,8 @@ CraftyfyProject
 ├── testng.xml
 └── README.md
 
-Prerequesites
+Prerequisites:
 Ensure the following are installed on your system:
-
 -Java JDK 8 or above
 -Maven
 -Git
@@ -46,7 +45,7 @@ Ensure the following are installed on your system:
 
 Setup Instructions
 1. Clone the Repository
-git clone <your-github-repo-url>
+git clone <github-repo-url>
 cd CraftyfyProject
 
 2. Configure Browser & Environment
@@ -56,7 +55,7 @@ Ensure ChromeDriver path is properly set (or managed via WebDriverManager)
 Install Dependencies
 mvn clean install
 
-How to Run Tests
+How to Run Tests:
 
 Run using TestNG XML 
 mvn test
@@ -67,6 +66,14 @@ Screenshots are automatically captured only when a test fails
 Implemented using TestNG Listeners
 Stored under:
 target/screenshots/
+
+Screenshot Handling
+Screenshots are captured automatically when a test case fails
+Implemented using TestNG Listeners (ITestListener)
+No screenshot code is written inside individual test cases
+Each screenshot is saved with:
+-Test method name
+-Timestamp (to avoid overwriting)
 
 Challenges Addressed:
 
