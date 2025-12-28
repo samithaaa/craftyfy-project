@@ -7,7 +7,8 @@
       <class name="testcases.LoginTest"/>
       <class name="testcases.ProductTest"/>
       <class name="testcases.CartTest"/>
-       <class name="testcases.OrderTest"/>
+      <class name="testcases.OrderTest"/>
+      <class name="testcases.ContactTest"/>
     </classes>
     <listeners>
     <listener class-name="listeners.ScreenshotListener"/>
