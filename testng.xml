@@ -3,9 +3,11 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+      <class name="base.TestBase"/>
       <class name="testcases.LoginTest"/>
       <class name="testcases.ProductTest"/>
-      <class name="base.TestBase"/>
+      <class name="testcases.CartTest"/>
+       <class name="testcases.OrderTest"/>
     </classes>
     <listeners>
     <listener class-name="listeners.ScreenshotListener"/>
