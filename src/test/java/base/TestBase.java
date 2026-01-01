@@ -23,6 +23,7 @@ public class TestBase {
 	  return driver;
 	}
 	
+	
 	public void readProp() throws IOException  //read config.properties file
 	{
 		FileReader fle=new FileReader("C:\\Users\\Samitha Fathima\\OneDrive\\Pictures\\Desktop\\SDET\\Craftyfy\\CraftyfyProject\\src\\test\\resources\\config.properties");

@@ -37,7 +37,7 @@ public class RegisterTest extends TestBase {
 	{
 		lpg.createAcc();
 		rp.enterName("Siya");
-		rp.enterEmail("siyaaaiii@gmail.com");
+		rp.enterEmail("siyaaaiiiii@gmail.com");
 		rp.enterPass("Siyaaaa#123");
 		rp.signUp();
 

@@ -3,16 +3,57 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="testcases.ProductTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="objinit"/>
+          <include name="cartBadge"/>
+        </methods>
+      </class> <!-- testcases.ProductTest -->
       <class name="testcases.WorkflowTest">
         <methods>
-          <include name="orderPlacing"/>
-          <include name="tearDown"/>
           <include name="objectint"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="checkOut"/>
           <include name="addingToCart"/>
         </methods>
       </class> <!-- testcases.WorkflowTest -->
+      <class name="testcases.ContactTest">
+        <methods>
+          <include name="checkExploreJobs"/>
+          <include name="objectint"/>
+          <include name="tearDown"/>
+          <include name="checkSubscribe"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.ContactTest -->
+      <class name="testcases.RegisterTest">
+        <methods>
+          <include name="objectint"/>
+          <include name="invalidReg"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.RegisterTest -->
+      <class name="testcases.LoginTest">
+        <methods>
+          <include name="forgotPassword"/>
+          <include name="homeLogout"/>
+          <include name="tearDown"/>
+          <include name="objinit"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.LoginTest -->
+      <class name="testcases.OrderTest">
+        <methods>
+          <include name="beforeDeliveryInfo"/>
+          <include name="beforeCheckout"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="checkTrackorder"/>
+        </methods>
+      </class> <!-- testcases.OrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
